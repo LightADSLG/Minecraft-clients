@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients & Hacked Clients</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Gradient Background Animation */
+        body {
+            overflow: hidden;
+            background: linear-gradient(45deg, #001f3f, #00ffff);
+            background-size: 200% 200%;
+            animation: gradientMove 10s ease infinite;
+            color: #e0e0e0;
+            text-align: center;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: bottom left; }
+            50% { background-position: top right; }
+            100% { background-position: bottom left; }
+        }
+
+        /* Snowflake Animation */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            z-index: 1000;
+            color: white;
+            font-size: 20px;
+            pointer-events: none;
+            animation: fall 10s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0.5; }
+        }
+
+        /* Snowflake Animation Timing */
+        .snowflake:nth-child(odd) { animation-duration: 12s; animation-delay: -1s; }
+        .snowflake:nth-child(even) { animation-duration: 15s; animation-delay: -2s; }
+
+        /* Scrollable Content */
+        .scrollable-content {
+            overflow-y: auto;
+            max-height: 90vh;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Heading Styles */
+        h1 {
+            font-size: 2.5em;
+            color: #ffdd57;
+            margin: 20px 0;
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #adff2f;
+            margin: 15px 0;
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        p, ul {
+            font-size: 1.1em;
+            margin: 15px;
+            line-height: 1.6;
+            padding-left: 20px;
+        }
+
+        ul {
+            list-style: disc;
+            color: #ffffff;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Snowflakes -->
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+
+    <!-- Scrollable Content -->
+    <div class="scrollable-content">
+        <h1>Clients & Hacked Clients</h1>
+
+        <section>
+            <h2>What are Clients?</h2>
+            <p>In Minecraft, a client is a version or variation of the game's launcher and interface. There are many clients with additional features for better FPS, visual adjustments, and quality-of-life improvements.</p>
+        </section>
+
+        <section>
+            <h2>What are Hacked Clients?</h2>
+            <p>Hacked clients are modified versions of the game that provide unfair advantages, like speed, auto-aim, and more. While these can be used on certain servers, using hacked clients is often against server rules and may lead to bans.</p>
+        </section>
+
+        <section>
+            <h2>Popular Clients</h2>
+            <p>Here are some of the most popular clients:</p>
+            <ul>
+                <li>Badlion Client</li>
+                <li>Lunar Client</li>
+                <li>Feather Client</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Popular Hacked Clients</h2>
+            <p>These are some commonly known hacked clients:</p>
+            <ul>
+                <li>Wurst</li>
+                <li>Impact</li>
+                <li>Aristois</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Minecraft Bedrock Clients</h2>
+            <p>Unlike Java Edition, Minecraft Bedrock Edition has its own set of clients designed to enhance gameplay. These clients offer optimizations, unique features, and smoother performance tailored to Bedrock's codebase.</p>
+            <ul>
+                <li>Onix Client</li>
+                <li>Horion Client</li>
+                <li>Flame Client</li>
+                <li>Genesis Client</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // Snowflake Generator
+        const numberOfSnowflakes = 30;
+        for (let i = 0; i < numberOfSnowflakes; i++) {
+            const snowflake = document.createElement("div");
+            snowflake.className = "snowflake";
+            snowflake.textContent = "❄";
+            snowflake.style.left = Math.random() * 100 + "vw";
+            snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+            document.body.appendChild(snowflake);
+        }
+    </script>
+
+</body>
+</html>
